@@ -23,12 +23,16 @@ const NavBar = () => {
       path: '/'
     },
     {
-      name: 'Fleet',
-      path: '/fleet'
+      name: 'Cars',
+      path: '/cars'
     },
     {
       name: 'About Us',
       path: '/about'
+    },
+    {
+      name: 'My Bookings',
+      path: '/bookings'
     }
   ]
 
