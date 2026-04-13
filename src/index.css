@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+/* Tailwind V4.0 */
+@import "tailwindcss";
+
+/* Dark-Mode Toggle manually */
+@variant dark (&:where(.dark, .dark *));
+
+/* on-special-cases */
+/* body {
+  background: #1b1b1b;
+  scroll-behavior: smooth;
+} */
+
+/* FONTS */
+
+/* Custom Fonts */
+
+@font-face {
+  font-family: "clash01";
+  src: url(/fonts/CLASHDISPLAY-MEDIUM.OTF);
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+
+.clash-display {
+  font-family: "clash01", sans-serif !important;
+}
+
+/* @font-face {
+  font-family: "clash01";
+  src: url(/fonts/CLASHDISPLAY-MEDIUM.OTF);
+}
+
+.clash-display {
+  font-family: "clash01", sans-serif !important;
+} */
+
+/* Google Fonts */
+* {
+  font-family: "poppins", "Plus Jakarta Sans", sans-serif;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  /* font-style: normal; */
+}
+
+/* Global Font Application */
+body {
+  /* font-family: "In", sans-serif; */
+  /* Ensure a consistent dark background globally */
+  background-color: theme("colors.zinc.950");
+  color: theme("colors.zinc.100"); /* Default text color */
+}
+
+/* Custom Utilities */
+@utility centered-row {
+  @apply flex items-center justify-center; /* Added justify-center for full centering */
+}
+
+@utility mirror-x {
+  @apply transform scale-x-[-1];
+}
+
+@utility glassmorphism {
+  @apply backdrop-blur-lg bg-white/5 border border-sky-500/20; /* New accent for border & shadow */
+  box-shadow: 0 4px 30px rgba(0, 179, 255, 0.1); /* Subtle blue glow */
+}
+
+/* Custom Components & Effects */
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl;
+    box-shadow: 0 4px 10px rgba(0, 179, 255, 0); /* Subtle initial shadow */
+  }
+
+  .btn-glow {
+    @apply relative overflow-hidden;
+  }
+
+  /* ----USEFUL----- */
+
+  .col {
+    @apply flex flex-col;
+  }
+
+  .center-item {
+    @apply centered-row justify-center;
+  }
+
+  .grad-text {
+    @apply text-transparent bg-gradient-to-tr  bg-clip-text;
+  }
+
+  .grad1 {
+    @apply text-transparent bg-gradient-to-tr bg-clip-text from-zinc-300 to-zinc-700;
+  }
+
+  .heading-2 {
+    @apply text-4xl md:text-5xl lg:text-6xl mb-2;
+  }
+
+  .filter-heading {
+    @apply text-lg mb-3 flex items-center gap-2 bg-zinc-800/70 py-2 px-1;
+  }
+
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-24;
+  }
+
+  /* ------END ---- USEFUL---- */
+}
