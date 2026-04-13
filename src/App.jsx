@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
-import NavBar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 // npm i three gsap @react-three/fiber @react-three/drei
 // npx gltfjsx monkey.jlb
